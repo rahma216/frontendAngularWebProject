@@ -1,0 +1,157 @@
+<style>
+  h1 {
+    font-size: 2rem; /* or any other desired size */
+    color: #333; /* or any other desired color */
+    text-align: center; /* or any other desired alignment */
+    text-transform: uppercase; /* or any other desired text transformation */
+    margin-bottom: 1rem; /* or any other desired margin */
+    /* any other desired styles can be added here */
+    color: rgb(107, 123, 138);
+  }
+</style>
+<br><br>
+<h1>Event List</h1>
+<br><br>
+<div class="card-container">
+  <div class="card event-card" *ngFor="let evn of evenements">
+    <div class="card-body">
+      <style>
+       .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #333333;
+}
+
+.card-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.card-details p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.card-details span {
+  font-size: 1.2rem;
+  color: #777777;
+}
+
+.card-categories {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.card-categories p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  color: #333333;
+}
+
+.card-categories ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-categories li {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: #777777;
+}
+
+.card-buttons {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+
+.custom-button {
+  background-color: #b3b4a4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+      </style>
+
+      <div class="card-header">
+        <h2>{{ evn.nom }}</h2>
+        <span>{{ evn.date | date:'dd/MM/yyyy' }}</span>
+      </div>
+
+      <div class="card-details">
+        <p>Lieu:</p>
+        <span>{{ evn.lieu }}</span>
+        <p>Capacité:</p>
+        <span>{{ evn.capacite }}</span>
+        <p>Organisateur:</p>
+        <span>{{ evn.organisateur }}</span>
+      </div>
+
+      <div class="card-categories">
+        <p>Categories:</p>
+        <ul>
+          <li *ngFor="let categorie of evn.categoriesList">{{ categorie.libelle }}</li>
+        </ul>
+      </div>
+  
+
+      
+      <div class="card-buttons">
+        <button (click)="updateEvent(evn.id)" class="custom-button">Update</button>
+        <button (click)="deleteEvent(evn.id)" class="custom-button">Delete</button>
+        <button (click)="EventDetails(evn.id)" class="custom-button">View</button>
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+<br><br>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

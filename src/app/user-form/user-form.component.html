@@ -1,0 +1,40 @@
+<div class="col-md-6 offset-md-3">
+    <h3 class="mb-4">Create Event</h3>
+    <h2>Category List</h2>
+
+   <!-- Add an input element with the event ID -->
+
+
+<!-- Update the (ngSubmit) binding to pass the form data as an argument -->
+<form (ngSubmit)="onSubmit(userForm.value)">
+
+      <div class="form-group">
+        <label for="nom">Event Name</label>
+        <input type="text" class="form-control" id="nom" [(ngModel)]="evenement.nom" name="nom" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" id="date" [(ngModel)]="evenement.date" name="date" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="lieu">Location</label>
+        <input type="text" class="form-control" id="lieu" [(ngModel)]="evenement.lieu" name="lieu" required>
+      </div>
+
+
+   
+ 
+
+      
+      
+
+
+     
+      
+  <br><br><br>
+      <button type="submit" class="btn btn-primary">Create Event</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,98 @@
+/* employee-list.component.css */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  
+  /* employee-list.component.css */
+  .card {
+    background-color: #dfe4ed;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    transition: all 0.2s;
+  
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    margin: 0;
+    color: #393b50;
+  }
+  
+  .card-text {
+    font-size: 18px;
+    margin: 0;
+    color: #424242;
+  }
+  
+  .card-category {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #757575;
+    text-transform: uppercase;
+  }
+  
+  .card-date {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #757575;
+  }
+  
+  .card-location {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #757575;
+  }
+  
+  .card-capacity {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #757575;
+  }
+  
+  .card-organizer {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #757575;
+  }
+  .custom-button {
+    background-color: #dfe4ed; /* set the background color to red */
+    color: #fff; /* set the text color to white */
+    border: none; /* remove the border */
+    padding: 10px 20px; /* set the padding */
+    font-size: 16px; /* set the font size */
+    cursor: pointer; /* set the cursor to pointer on hover */
+  }
+  .cardrahma {
+    border: none;
+    border-radius: 10px;
+    max-width: 300px;
+  margin-bottom: 20px;
+    margin-bottom: 20px;
+    transition: all 0.1s;
+    background-color:#dfe4ed;;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    }
+  

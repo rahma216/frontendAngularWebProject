@@ -1,0 +1,37 @@
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    border-radius: 0;
+  }
+  
+  .form-control:focus {
+    border-color: #b4bdce;
+    box-shadow: none;
+  }
+  
+  .btn-primary {
+    background-color: #b4bdce;
+    border-color: #b4bdce;
+  }
+  
+  .btn-primary:hover {
+    background-color: #b4bdce;
+    border-color: #b4bdce;
+    opacity: 0.8;
+  }
+  .my-custom-class {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: white;
+    font-size: 14px;
+  }
+  .my-custom-class .mat-select-panel {
+    margin-top: -36px;
+  }
+.card {
+  background-color: #b4bdce;
+}

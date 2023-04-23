@@ -1,0 +1,46 @@
+<div class="event-details-container">
+    <h3 class="event-details-header">View event Details</h3>
+    <div class="event-details-value">
+      <label class="event-details-label"><b>Nom:</b></label> {{event.nom}}
+    </div>
+    <div class="event-details-value">
+      <label class="event-details-label"><b>Date:</b></label> {{event.date | date}}
+    </div>
+    <div class="event-details-value">
+      <label class="event-details-label"><b>Lieu:</b></label> {{event.lieu}}
+    </div>
+    <div class="event-details-value">
+      <label class="event-details-label"><b>Description:</b></label> {{event.description}}
+    </div>
+    <div class="event-details-value">
+      <label class="event-details-label"><b>Capacité:</b></label> {{event.capacite}}
+    </div>
+    <div class="event-details-value">
+      <label class="event-details-label"><b>Organisateur:</b></label> {{event.organisateur}}
+    </div>
+    <div class="event-details-categories">
+      <label class="event-details-label"><b>Catégories:</b></label>
+      <ul>
+        <li class="event-details-category" *ngFor="let categorie of event.categoriesList">{{ categorie.libelle }}</li>
+      </ul>
+    </div>
+    <div class="event-details-forms">
+      <h2 class="event-details-forms-header">User Forms:</h2>
+      <div class="event-details-form" *ngFor="let userForm of userForm; let i=index">
+        <div class="event-details-form-header">{{ i+1 }}. {{ userForm.nom }}</div>
+        <div class="event-details-form-value">{{ userForm.email }}</div>
+        <!-- Add any additional fields you want to display here -->
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
